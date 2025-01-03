@@ -13,6 +13,13 @@
         <span class="ml-1">{{ menu.name }}</span>
       </div>
     </div>
+    <a 
+      href="https://edgeone.ai/products/pages" 
+      target="_blank"
+      class="absolute bottom-0 left-0 right-0 block px-6 py-4 text-sm text-center text-gray-600 transition-colors duration-200 border-t border-gray-100 hover:text-gray-800"
+    >
+      由EdgeOne Pages提供服务
+    </a>
   </ElScrollbar>
 </template>
 
