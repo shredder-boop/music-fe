@@ -1,13 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VUE3-MUSIC</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VUE3-MUSIC</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
+  <script>
+    ; (function loadGoogleAnalytics() {
+      const GA_ID = 'G-MBR88GEWNE';
+
+      if (!GA_ID) {
+        console.warn('Google Analytics ID is not defined');
+        return;
+      }
+
+      function createAnalyticsScripts() {
+        const script1 = document.createElement('script');
+        script1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+        script1.async = true;
+
+        const script2 = document.createElement('script');
+        script2.textContent = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${GA_ID}');
+      `;
+
+        try {
+          document.head.appendChild(script1);
+          document.head.appendChild(script2);
+        } catch (err) {
+          console.error('Failed to load Google Analytics:', err);
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', createAnalyticsScripts);
+      } else {
+        createAnalyticsScripts();
+      }
+    })();
+  </script>
+</body>
+
 </html>
