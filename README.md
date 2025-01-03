@@ -1,5 +1,3 @@
-
-
 # VUE3-MUSIC
 
 基于 VUE3+TS 开发的音乐播放器，界面模仿QQ音乐mac客户端。
@@ -12,6 +10,9 @@
 
 在线演示为了安全考虑，不提供API接口服务，需要准备好自己的API服务地址，并且是HTTPS的，没有HTTPS的服务，可以本地运行，首次打开时会要求设置API地址
 
+## 一键部署
+
+[![Deploy with EdgeOne Pages](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://edgeone.ai/pages/new?from=github&template=https://github.com/shredder-boop/music-fe)
 
 ## 本地安装
 
@@ -52,3 +53,7 @@ yarn run dev
 ## PS
 
 通过此开源项目学习VUE3的强大..加油！
+
+## 原项目
+
+https://github.com/SmallRuralDog/vue3-music
