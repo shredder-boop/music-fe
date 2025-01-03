@@ -23,7 +23,7 @@ export default defineConfig({
     },
     //base:'/vue3-music/',
     build: {
-        outDir: 'docs',
+        outDir: 'dist',
     },
     server: {
         port: 3002,
